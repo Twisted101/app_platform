@@ -1,14 +1,15 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from "vue";
-import Vuex from "vuex";
 import App from "./App";
 import router from "./router";
-
+import store from "./store";
+import "normalize.css"; //浏览器样式初始化
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-
-Vue.use(Vuex);
+import "bootstrap-table/dist/bootstrap-table.min.css";
+import "bootstrap-table/dist/bootstrap-table.min.js"
+import "bootstrap-table/src/locale/bootstrap-table-zh-CN"
 
 Vue.config.productionTip = false;
 
@@ -16,6 +17,7 @@ Vue.config.productionTip = false;
 new Vue({
   el: "#app",
   router,
+  store,
   components: { App },
   template: "<App/>"
 });
